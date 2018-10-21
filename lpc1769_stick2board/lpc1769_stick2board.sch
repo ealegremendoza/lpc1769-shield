@@ -96,17 +96,6 @@ F 3 "" H 6700 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
-U 1 1 5BC5F4F8
-P 2850 2350
-F 0 "#PWR01" H 2850 2100 50  0001 C CNN
-F 1 "GND" H 2850 2200 50  0000 C CNN
-F 2 "" H 2850 2350 50  0001 C CNN
-F 3 "" H 2850 2350 50  0001 C CNN
-	1    2850 2350
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR02
 U 1 1 5BC5F57C
 P 6700 5050
@@ -155,28 +144,6 @@ Text Label 4650 5900 1    60   ~ 0
 P15
 Text Label 4750 5900 1    60   ~ 0
 P14
-$Comp
-L Battery_Cell BT1
-U 1 1 5BC60F7F
-P 2850 2000
-F 0 "BT1" H 2950 2100 50  0000 L CNN
-F 1 "Battery_Cell" H 2950 2000 50  0000 L CNN
-F 2 "Battery_Holders:Keystone_106_1x20mm-CoinCell" V 2850 2060 50  0001 C CNN
-F 3 "" V 2850 2060 50  0001 C CNN
-	1    2850 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L PWR_FLAG #FLG03
-U 1 1 5BC612D7
-P 2500 2150
-F 0 "#FLG03" H 2500 2225 50  0001 C CNN
-F 1 "PWR_FLAG" H 2500 2300 50  0000 C CNN
-F 2 "" H 2500 2150 50  0001 C CNN
-F 3 "" H 2500 2150 50  0001 C CNN
-	1    2500 2150
-	1    0    0    -1  
-$EndComp
 Text Notes 4100 1350 0    60   ~ 12
 Módulo para conexión de LPCXpresso LPC1769 rev C
 $Comp
@@ -295,13 +262,6 @@ Wire Wire Line
 Wire Wire Line
 	7000 2350 7050 2350
 Wire Wire Line
-	2850 2100 2850 2350
-Wire Wire Line
-	2500 2200 3550 2200
-Wire Wire Line
-	3550 2200 3550 2350
-Connection ~ 3550 2350
-Wire Wire Line
 	6700 5050 6700 4950
 Connection ~ 6700 4950
 Wire Wire Line
@@ -342,16 +302,6 @@ Wire Wire Line
 	4350 5550 4350 5900
 Wire Wire Line
 	4250 5550 4250 5900
-Connection ~ 2850 2200
-Wire Wire Line
-	2850 1800 2850 1700
-Wire Wire Line
-	3750 1700 3750 2550
-Connection ~ 3750 2550
-Wire Wire Line
-	2500 2150 2500 2200
-Wire Wire Line
-	2850 1700 3750 1700
 Wire Wire Line
 	8850 2350 9150 2350
 Wire Wire Line
@@ -435,4 +385,34 @@ Text Notes 8400 2100 0    60   ~ 0
 OPCIONAL
 Text Notes 6350 1950 0    60   ~ 0
 Solo puentear en caso\nde no alimentar vía USB.
+$Comp
+L GND #PWR?
+U 1 1 5BC9F8CA
+P 2850 2350
+F 0 "#PWR?" H 2850 2100 50  0001 C CNN
+F 1 "GND" H 2850 2200 50  0000 C CNN
+F 2 "" H 2850 2350 50  0001 C CNN
+F 3 "" H 2850 2350 50  0001 C CNN
+	1    2850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2000 2850 2350
+Wire Wire Line
+	2850 2150 3650 2150
+Wire Wire Line
+	3650 2150 3650 2350
+Connection ~ 3650 2350
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5BC9F967
+P 2850 2000
+F 0 "#FLG?" H 2850 2075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2850 2150 50  0000 C CNN
+F 2 "" H 2850 2000 50  0001 C CNN
+F 3 "" H 2850 2000 50  0001 C CNN
+	1    2850 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2850 2150
 $EndSCHEMATC

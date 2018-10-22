@@ -433,4 +433,6 @@ Text Label 8050 3250 2    60   ~ 0
 P15
 Text Notes 8400 2100 0    60   ~ 0
 OPCIONAL
+Text Notes 6350 1950 0    60   ~ 0
+Solo puentear en caso\nde no alimentar vía USB.
 $EndSCHEMATC
